@@ -20,8 +20,16 @@ namespace Lesson2
 
         private void InvoiceTotalForm_Load(object sender, EventArgs e)
         {
-
+            ResetSubtotalTextbox();
         }
+
+        private void ResetSubtotalTextbox()
+        {
+            subtotalTextBox.Focus();
+            subtotalTextBox.Text = "0";
+            subtotalTextBox.SelectAll();
+        }
+
         /// <summary>
         /// Calculate button event handler
         /// </summary>
@@ -50,8 +58,7 @@ namespace Lesson2
             {
                 MessageBox.Show("Invalid Data Entered", "Input Error");
                 Debug.WriteLine(exception.Message);
-                subtotalTextBox.Focus();
-                subtotalTextBox.SelectAll();
+                ResetSubtotalTextbox();
             }
             
 
