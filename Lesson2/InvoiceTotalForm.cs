@@ -37,7 +37,16 @@ namespace Lesson2
         /// <param name="e"></param>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            // Local variables
+            CalculateDiscount();
+        }
+
+        /// <summary>
+        /// Takes the subtotal value from the application, 
+        /// extracts the double value, 
+        /// catches the error and calculates the discount total
+        /// </summary>
+        private void CalculateDiscount()
+        {
             const double DiscountPercent = 0.1;
             double Subtotal;
             double DiscountAmount;
@@ -60,15 +69,6 @@ namespace Lesson2
                 Debug.WriteLine(exception.Message);
                 ResetSubtotalTextbox();
             }
-            
-
-            // DiscountAmount = Subtotal x 0.1
-
-            // Total = Subtotal - DiscountAmount
-
-            // Display DiscountAmount in related text box
-
-            // Display Total in related Text Box
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
