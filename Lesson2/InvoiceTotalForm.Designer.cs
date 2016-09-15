@@ -91,6 +91,7 @@
             this.discountPercentTextbox.ReadOnly = true;
             this.discountPercentTextbox.Size = new System.Drawing.Size(100, 20);
             this.discountPercentTextbox.TabIndex = 5;
+            this.discountPercentTextbox.Text = "10.0%";
             // 
             // discountAmountTextbox
             // 
